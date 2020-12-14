@@ -7,54 +7,14 @@
 
 import Foundation
 
-//var переменная
-//let константа
+//Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
+//Катеты a,b. c - гипотенуза. s - площадью p - периметр
+var a = 5.4
+var b = 2.1
+var c = round(sqrt(a * a) + (a * b)*100)/100
+var p = round(a + b + c)*100/100
+var s = round(a * b)*100/100
 
-
-
-let employCountVisits = [2, 3, 5]
-
-//Массив массивов
-let upperEmploy: [[String]] = [
-    ["rrrr", "sfsffd", "sddss"],
-    ["fdfdfd", "sdddd"]
-]
-//Dictionary
-var namesOfIntegers: [String: String] = [:]
-namesOfIntegers["Swift"] = "Язык разработки под iOS"
-namesOfIntegers["ObjectiveC"] = "Язык разработки под iOS, который предшевствовал Swift"
-
-print(namesOfIntegers["Swift"])
-
-//Коллекции
-let employList: [String] = [
-    "Петр Феодосеев",
-    "Геннадий Новиков",
-    "Давид С"
-]
-print(employList)
-
-let employListSet: Set<String> = [
-    "Петр Феодосеев",
-    "Давид С",
-    "Давид С"
-]
-print(employListSet)
-
-var r: Double? = .none
-r = 5
-if let value = r {
-    print(value)
-} else  {
-    print("Сервер не прислал ничего")
-}
-// еще вариант
-let result = r ?? 0
-
-switch r {
-    case .none: print("Server ничего не вернул")
-    case let .some(value): print(value)
-}
-
-print("Hello, World!")
-
+print("Размер гипотенузы: \(c)")
+print("Площадь треугольника: \(s)")
+print("Периметр треугольника: \(p)")
