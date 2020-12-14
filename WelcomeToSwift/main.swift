@@ -6,55 +6,23 @@
 //
 
 import Foundation
+// Домашнее задание №3
+// * Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет .
+var depositAmount: Double = 5000
+let yearPercent: Double = 20
+let year = 5
+var depositAddYear: Double
+var countYear = 0
 
-//var переменная
-//let константа
-
-
-
-let employCountVisits = [2, 3, 5]
-
-//Массив массивов
-let upperEmploy: [[String]] = [
-    ["rrrr", "sfsffd", "sddss"],
-    ["fdfdfd", "sdddd"]
-]
-//Dictionary
-var namesOfIntegers: [String: String] = [:]
-namesOfIntegers["Swift"] = "Язык разработки под iOS"
-namesOfIntegers["ObjectiveC"] = "Язык разработки под iOS, который предшевствовал Swift"
-
-print(namesOfIntegers["Swift"])
-
-//Коллекции
-let employList: [String] = [
-    "Петр Феодосеев",
-    "Геннадий Новиков",
-    "Давид С"
-]
-print(employList)
-
-let employListSet: Set<String> = [
-    "Петр Феодосеев",
-    "Давид С",
-    "Давид С"
-]
-print(employListSet)
-
-var r: Double? = .none
-r = 5
-if let value = r {
-    print(value)
-} else  {
-    print("Сервер не прислал ничего")
-}
-// еще вариант
-let result = r ?? 0
-
-switch r {
-    case .none: print("Server ничего не вернул")
-    case let .some(value): print(value)
+var i = year
+while i>0 {
+        depositAddYear = depositAmount/100*yearPercent
+        depositAmount = round(depositAmount + depositAddYear)*100/100
+        countYear += 1
+        print("Сумма вклада год \(countYear), будет равна : \(depositAmount)")
+        
+        i-=1
 }
 
-print("Hello, World!")
+
 
