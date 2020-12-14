@@ -6,15 +6,23 @@
 //
 
 import Foundation
+// Домашнее задание №3
+// * Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет .
+var depositAmount: Double = 5000
+let yearPercent: Double = 20
+let year = 5
+var depositAddYear: Double
+var countYear = 0
 
-//Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
-//Катеты a,b. c - гипотенуза. s - площадью p - периметр
-var a = 5.4
-var b = 2.1
-var c = round(sqrt(a * a) + (a * b)*100)/100
-var p = round(a + b + c)*100/100
-var s = round(a * b)*100/100
+var i = year
+while i>0 {
+        depositAddYear = depositAmount/100*yearPercent
+        depositAmount = round(depositAmount + depositAddYear)*100/100
+        countYear += 1
+        print("Сумма вклада год \(countYear), будет равна : \(depositAmount)")
+        
+        i-=1
+}
 
-print("Размер гипотенузы: \(c)")
-print("Площадь треугольника: \(s)")
-print("Периметр треугольника: \(p)")
+
+
