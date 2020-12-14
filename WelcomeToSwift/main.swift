@@ -7,54 +7,27 @@
 
 import Foundation
 
-//var переменная
-//let константа
+//Решение квадратного уравнения ax2 + bx + c = 0
+//Коэффициенты
+let a: Double = 7
+let b: Double = 1
+let c: Double = -6
 
+var x1: Double
+var x2: Double
 
+//Вычисление дискриминанта
+var d = b * b - 4 * a * c
+print("Дискриминант = \(d)")
 
-let employCountVisits = [2, 3, 5]
-
-//Массив массивов
-let upperEmploy: [[String]] = [
-    ["rrrr", "sfsffd", "sddss"],
-    ["fdfdfd", "sdddd"]
-]
-//Dictionary
-var namesOfIntegers: [String: String] = [:]
-namesOfIntegers["Swift"] = "Язык разработки под iOS"
-namesOfIntegers["ObjectiveC"] = "Язык разработки под iOS, который предшевствовал Swift"
-
-print(namesOfIntegers["Swift"])
-
-//Коллекции
-let employList: [String] = [
-    "Петр Феодосеев",
-    "Геннадий Новиков",
-    "Давид С"
-]
-print(employList)
-
-let employListSet: Set<String> = [
-    "Петр Феодосеев",
-    "Давид С",
-    "Давид С"
-]
-print(employListSet)
-
-var r: Double? = .none
-r = 5
-if let value = r {
-    print(value)
-} else  {
-    print("Сервер не прислал ничего")
-}
-// еще вариант
-let result = r ?? 0
-
-switch r {
-    case .none: print("Server ничего не вернул")
-    case let .some(value): print(value)
-}
-
-print("Hello, World!")
+if d > 0 {
+        x1 = round((-b + sqrt(d)) / (2 * a)*100)/100
+        x2 = round((-b - sqrt(d)) / (2 * a)*100)/100
+        print("x1=\(x1);\nx2=\(x2)")
+    }  else if d == 0 {
+        x1 = round((-b) / (2 * a)*100)/100
+        print("x=\(x1)")
+    } else {
+        print("Корней нет")
+    }
 
